@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+
+    {% for event in event_list %}
+        <div>
+            <p>
+                {{ event.date }} {{ event.name }} {{ event.guest_amount }} {{ event.room_location }} {{ event.desc }}
+                <!-- {% if recurring %}
+                    <span> &#9989; </span>
+                {% endif %} -->
+            </p>
+        </div>
+    {% endfor %}
+
+
+
+
+
+
+{% endblock content %}

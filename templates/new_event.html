@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>New Event</h1>
+
+    <form action="/events" method="post">
+        <label for="date">Select a date:</label>
+        <input type="date" id="date" name="date"value="2023-02-09"min="2023-01-01" max="2030-12-31">
+
+        <label for="name">Name Of Event:</label>
+        <input type="text" name="name" id="name">
+
+        <label for="guest_amount">How Many Guest's Are Coming:</label>
+        <input type="number" name="guest_amount" id="guest_amount">
+
+        <label for="room_num">What Room Number:</label>
+        <input type="number" name="room_num" id="room_num">
+
+        <label for="desc">Event Description:</label>
+        <textarea name="desc" id="desc" cols="30" rows="3"></textarea>
+        
+        <label for="scales">Recurring:</label>
+        <input type="checkbox" id="recurring" name="recurring">
+        
+        <input type="submit" value="Add Event">
+    </form>
+
+{% endblock content %}
